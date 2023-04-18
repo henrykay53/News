@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
+*,
+*::before,
+*::after {
+
+    box-sizing: border-box;
+}
+
+:root {
+
+    /* colors */
+    --soft-orange: hsl(35, 77%, 62%);
+    --soft-red: hsl(5, 85%, 63%);
+    --off-white: hsl(36, 100%, 99%);
+    --grayish-blue: hsl(233, 8%, 79%);
+    --dark-grayish-blue: hsl(236, 13%, 42%);
+    --dark-blue: hsl(240, 100%, 5%);
+
+    /* Typography */
+    --fs-header: 2em;
+    --fs-para: 1em;
+    --fs-inter: url("https://fonts.google.com/specimen/Inter");
+    --fw-l: 400;
+    --fw-xl: 700;
+    --fw-xxl: 900;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.mobile {
+    display: none;
+}
+
+.noscroll  {
+    position: fixed;
+}
+
+.mobile-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.mobile-menu {
+
+    position: absolute;
+    top: -2em;
+    right: -1em;
+    z-index: 1;
+    box-shadow: -5em 0 100em rgb(14, 14, 14);
+    background: var(--off-white);
+    width: 70%;
+    height: 100%;
+}
+
+.mobile-menu div {
+
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 2em;
+}
+
+.hamburger-close {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+h1 {
+    font-size: var(--fs-header);
+    font-weight: var(--fw-xxl);
+}
+
+.hero-para {
+    font-size: var(--fs-para);
+    color: var(--dark-grayish-blue);
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.hero-img {
+    width: 100%;
+}
+
+button {
+    background: var(--soft-red);
+    color: var(--off-white);
+    padding: 1.3em 3em;
+    border: transparent;
+    letter-spacing: .3em;
+    font-weight: var(--fw-xl);
+}
+
+.new {
+    background: var(--dark-blue);
+    color: white;
+    padding: .4em 2em;
+    margin-top: 4em;
+    margin-bottom: 4em;
+}
+
+.new div {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.new div p {
+    line-height: 2em;
+}
+
+.orange {
+    color: var(--soft-orange);
+    font-weight: var(--fw-xl);
+    font-size: var(--fs-header);
+}
+
+.col {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 2em;
+}
+
+.content {
+    margin-top: -2em;
+}
+
+.numbers {
+    color: var(--grayish-blue);
+    font-size: var(--fs-header)
+}
+
+.content-header {
+    margin-top: -1em;
+    font-weight: var(--fw-xxl)
+}
+
+.content-para {
+    line-height: 1.9em;
+    color: var(--grayish-blue);
+    font-size: var(--fs-para);
+}
+
+.desktop {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.desktop-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.links {
+    display: flex;
+    gap: 2em;
+}
+
+li {
+    list-style: none;
+    color: var(--dark-grayish-blue);
+}
+
+li:hover {
+    color: var(--soft-orange);
+}
+
+button:hover {
+    background: var(--dark-blue);
+}
+
+.content-header:hover {
+    color: var(--soft-orange);
+}
+
+.cols {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.cols-one {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.cols-two h1 {
+    font-size: 3em;
+}
+
+.cols-four {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.desktop-new {
+    background: var(--dark-blue);
+    color: white;
+    padding: .4em 2em;
+}
+
+.desktop-new div {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.desktop-new div p {
+    line-height: 2em;
+}
+
+.desktop-orange {
+    color: var(--soft-orange);
+    font-weight: var(--fw-xl);
+    font-size: var(--fs-header);
+}
+
+.flex {
+    display: flex;
+    gap: 2em;
+    margin-top: 4em;
+    margin-bottom: 4em;
+}
+
+/* Media query for mobile */
+@media screen and (max-width: 1066px) {
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }   
+}
+
+/* Media query for desktop */
+@media screen and (min-width: 1067px) {
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
+    
+}
